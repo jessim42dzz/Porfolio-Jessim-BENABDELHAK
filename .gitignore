@@ -1,0 +1,35 @@
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Systèmes d'exploitation
+Thumbs.db
+.DS_Store
+
+# Fichiers système
+*.log
+*.tmp
+.env.local
+
+# Node.js (si jamais vous l'utilisez)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python (si jamais vous l'utilisez)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Autre
+*.zip
+*.rar
+.archive/
