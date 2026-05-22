@@ -353,6 +353,83 @@ section { position: relative; }
 .project-link:hover { border-color: var(--coral); color: var(--coral); }
 
 /* ─── PARCOURS ─── */
+
+/* STAGE */
+#stage { background: var(--bg); border-bottom: 2px solid var(--ink); }
+.stage-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+.stage-intro p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.85;
+  max-width: 680px;
+}
+.stage-infos { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-end; }
+.stage-weeks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+.stage-week {
+  min-height: 230px;
+  border: 1px solid var(--ink);
+  padding: 2rem;
+  background: var(--surface);
+  position: relative;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+  cursor: none;
+}
+.stage-week:hover {
+  background: var(--lime);
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0 var(--ink);
+  z-index: 2;
+}
+.stage-week-number {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--coral);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.stage-week h3 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+.stage-week p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.stage-week:hover p,
+.stage-week:hover .stage-week-number { color: var(--ink); }
+.stage-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+}
+.stage-tags span {
+  font-size: 0.66rem;
+  color: var(--muted);
+  border: 1px solid var(--ink);
+  background: var(--bg);
+  padding: 0.2rem 0.55rem;
+}
+.stage-week:hover .stage-tags span {
+  background: var(--ink);
+  color: var(--lime);
+}
 #parcours { background: var(--surface); border-bottom: 2px solid var(--ink); }
 .timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
 .timeline-item {
@@ -454,5 +531,8 @@ footer span { color: var(--lime); }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
   .timeline { grid-template-columns: 1fr; }
+  .stage-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+  .stage-infos { justify-content: flex-start; }
+  .stage-weeks { grid-template-columns: 1fr; }
   .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
 }
